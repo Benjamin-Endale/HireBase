@@ -102,11 +102,11 @@ const page = () => {
                             </div>
                     </div>
                     {/* Status */}
-                    <div className='w-full flex flex-col gap-23 justify-between bg-lightBlack '>
+                    <div className='w-full h-87.75 flex flex-col gap-23 justify-between bg-lightBlack '>
                         <div>
                             <img src="/longLine.png" alt="slashLines" />
                         </div>
-                        <div className='  flex items-center gap-59 px-30.25 '>
+                        <div className='flex items-center gap-59 px-30.25 '>
                             <div className='flex items-center gap-8'>
                                 < div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
                                         <img src="/Icons/LiveJob.png" alt="" />
