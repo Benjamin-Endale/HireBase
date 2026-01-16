@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+ html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
 }
 
  @theme{
@@ -15,6 +22,8 @@
   --color-borderBacksecond:rgba(255,255,255,0.08);
   --color-borderGray:rgba(255,255,255,0.5);
   --color-lightBlack:#171719;
+  --color-lightText:rgba(0,0,0,0.48);
+  --color-borderDark:#8E8E8E;
 }
 
 
