@@ -24,6 +24,9 @@
   --color-lightBlack:#171719;
   --color-lightText:rgba(0,0,0,0.48);
   --color-borderDark:#8E8E8E;
+  --color-darkenBorder:#C1C1C1;
+  --color-grayWhite:rgba(200,200,200,1);
+  --animate-marquee:marquee-right 8s linear infinite;;
 }
 
 
@@ -37,4 +40,13 @@
   .blackBorderWidth{
     @apply absolute    w-0.5 top-2 bottom-2 bg-lightBlack
   } 
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

@@ -2,8 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='flex flex-col min-h-dvh font-medium'>
-
+    <div className='flex flex-col min-h-dvh font-medium mb-20 px-29.5'>
         <main>
             <div className='relative border-2 flex flex-col gap-47.5  border-t-0 pt-11.5 pb-39.75  border-borderDark '>
                 <div className='absolute  w-0.5 h-full bg-borderBack -left-0.5 bottom-2'></div>
@@ -30,13 +29,12 @@ const page = () => {
                                 <div className='Nav hover:border-mainOrange cursor-pointer'><h4>Contact</h4></div>
                             </div>
                         </nav>
-
                         <div>
                             <img src="/miniLine.png" alt="" />
                         </div>
                     </div>
                     {/* Account */}
-                    <div className='flex items-center gap-10.75 -ml-1.5'>
+                    <div className='flex items-center gap-10.75  -ml-1.5'>
                         <div>
                             <button className='cursor-pointer'>
                                 Login
@@ -108,8 +106,10 @@ const page = () => {
                         </div>
                         <div className='flex items-center gap-59 px-30.25 '>
                             <div className='flex items-center gap-8'>
-                                < div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
-                                        <img src="/Icons/LiveJob.png" alt="" />
+                                <div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
+                                    <div className='relative w-full h-full'>
+                                        <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' src="/Icons/LiveJob.png" alt="" />
+                                    </div>
                                     {/* BorderFour */}
                                     <div className="blackBorderHeight -top-px"></div>
                                     <div className="blackBorderHeight -bottom-px"></div>
@@ -122,8 +122,10 @@ const page = () => {
                                 </div>
                             </div>
                             <div className='flex items-center gap-8'>
-                            < div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
-                                    <img src="/Icons/Companies.png" alt="" />
+                            <div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
+                                <div className='w-full h-full relative'>
+                                    <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' src="/Icons/Companies.png" alt="" />
+                                </div>
                                     {/* BorderFour */}
                                     <div className="blackBorderHeight -top-px"></div>
                                     <div className="blackBorderHeight -bottom-px"></div>
@@ -136,8 +138,10 @@ const page = () => {
                                 </div>
                             </div>
                             <div className='flex items-center gap-8'>
-                            < div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
-                                    <img src="/Icons/NewJob.png" alt="" />
+                            <div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
+                                    <div className='w-full h-full relative'>
+                                        <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'  src="/Icons/NewJob.png" alt="" />
+                                    </div>
                                     {/* BorderFour */}
                                     <div className="blackBorderHeight -top-px"></div>
                                     <div className="blackBorderHeight -bottom-px"></div>
@@ -151,7 +155,9 @@ const page = () => {
                             </div>
                             <div className='flex items-center gap-8 '>
                             <div className='relative w-15.75 h-15.75 border border-borderGray bg-borderBacksecond'>
-                                    <img src="/Icons/Candidates.png" alt="" />
+                                    <div className='absolute w-full h-full'>
+                                        <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'  src="/Icons/Candidates.png" alt="" />
+                                    </div>
                                     {/* BorderFour */}
                                     <div className="blackBorderHeight -top-px"></div>
                                     <div className="blackBorderHeight -bottom-px"></div>
@@ -180,6 +186,69 @@ const page = () => {
                     </div>
                 </section>
             </div>
+                <div className='my-4'>
+                    <img src="/whiteLongLine.png" alt="slash" />
+                </div>
+                {/* SecondPart */}
+                <section className='relative border-2  py-40.75  border-borderDark'>
+                    <div className='absolute  w-0.5   top-2 bg-borderBack -left-0.5 bottom-2'></div>
+                    <div className='absolute  w-0.5   top-2 bg-borderBack -right-0.5 bottom-2'></div>
+                    {/* BigBlackBorder */}
+                    <div className='absolute  w-10.75 h-full top-0 bg-black right-0 bottom-0'></div>
+
+                    <div className='absolute   h-0.5 -bottom-0.5  bg-borderBack left-2 right-2  '></div>
+                    <div className='absolute   h-0.5 -top-0.5  bg-borderBack left-2 right-2  '></div>
+
+                    {/* Content */}
+                    <div className='flex   h-full '>
+                        <div className='h-full   ml-35 mr-28.25  flex flex-col    justify-center gap-10'>
+                            <div className='flex flex-col gap-5.25'>
+                                <div>
+                                    <img src="/Icons/zap.png" alt="" />
+                                </div>
+                                <div className='space-y-5.25'>
+                                    <h4 className='text-[2rem] tracking-tight leading-[139%] font-semibold'>Find Your Next  <br /> Opportunity  <span className='italic'>Faster</span></h4>
+                                    <p className='text-lightText w-full   leading-[139%]  '>Discover jobs, leads, or business opportunities with real-time  data <br /> straight from companies. Be among the first to apply, connect, or <br /> pitch—so you stay ahead of the competition.</p>
+                                </div>
+                            </div>
+                            <button className='w-39.25 h-12 bg-mainOrange flex items-center justify-center rounded-[3px] gap-2.5 cursor-pointer'>
+                                <span className='text-white'>Explore Job</span>
+                                <img src="/Icons/arrowRight.png" alt="" />
+                            </button>
+
+                            {/* InfiniteScroll */}
+                <div className="relative w-111.25 h-6.5 border border-red-900 overflow-hidden">
+                <div className="absolute left-0 top-0 flex w-max items-center gap-8 animate-marquee whitespace-nowrap">
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">Google</h4>
+                                    <h4 className="text-grayWhite shrink-0">HireBase</h4>
+                                    <h4 className="text-black shrink-0">OpenAI</h4>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div className='w-0.5  bg-darkenBorder'></div>
+                        <div className='flex flex-1    items-center justify-center '>
+                            <img src="/pages.png" alt="" />
+                        </div>
+                    </div>
+
+                </section>
         </main>
     </div>
   )
