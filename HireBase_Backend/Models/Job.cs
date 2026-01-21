@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Jobposting.HireBase_Backend.Models
+namespace HireBase_Backend.Models
 {
     [Table("jobs")]
     public class Job
@@ -18,10 +18,7 @@ namespace Jobposting.HireBase_Backend.Models
         public Guid? RecruiterID { get; set; }
         public Recruiter? Recruiter { get; set; }
 
-        public Guid? ApplicantID { get; set; }
-        public Applicant? Applicant { get; set; }
-
-        //
+  
 
         [Required(ErrorMessage = "Job title is required")]
         [MaxLength(255, ErrorMessage = "Job title cannot exceed 255 characters")]

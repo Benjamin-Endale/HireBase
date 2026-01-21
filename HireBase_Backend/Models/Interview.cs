@@ -1,14 +1,11 @@
-namespace Jobposting.HireBase_Backend.Models
+namespace HireBase_Backend.Models
 {
     public class Interview
     {
         public Guid Id { get; set; }
 
-        public Guid? JobId { get; set; }
-        public Job? Job { get; set; } = null!;
-
-        public Guid? ApplicantId { get; set; }       // Changed from int? to Guid?
-        public Applicant? Applicant { get; set; } = null!;
+        public Guid? ShortlistId { get; set; }
+        public Shortlist? Shortlist { get; set; } = null!;
 
         public DateTime? ScheduledTime { get; set; }
 

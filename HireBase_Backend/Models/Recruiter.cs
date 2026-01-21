@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace Jobposting.HireBase_Backend.Models
+namespace HireBase_Backend.Models
 {
     public class Recruiter
     {
@@ -33,7 +33,7 @@ namespace Jobposting.HireBase_Backend.Models
 
         [Column("updated_at")]
         public DateTime? UpdatedAt { get; set; }
-
+           
         [Column("closing_date")]
         public DateTime? ClosingDate { get; set; }
 
