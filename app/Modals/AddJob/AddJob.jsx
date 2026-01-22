@@ -141,7 +141,7 @@ export default function AddJob({ onClose , tenantId, token  }) {
           {/* Right Column */}
           <div className="w-[15.5625rem] flex flex-col gap-[2.375rem]">
             {/* Department Dropdown */}
-            <div>
+            {/* <div>
               <Controller
                 name="department"
                 control={control}
@@ -156,7 +156,7 @@ export default function AddJob({ onClose , tenantId, token  }) {
                 )}
               />
               {errors.department && <p className="text-Error text-[1rem]">{errors.department.message}</p>}
-            </div>
+            </div> */}
 
             {/* Job Type Dropdown */}
             <div className="flex flex-col gap-[1rem] relative">

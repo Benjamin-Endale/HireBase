@@ -1,16 +1,18 @@
 'use client';
-import React from 'react';
+import React , {useState} from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Dropdown } from '@/app/Components/DropDown';
+import DropDownSearch from '@/app/Components/DropDownSearch';
+import { hrmsAPI } from '@/app/lib/api/client';
 
 
 const goalSchema = z.object({
-  employee: z.string().min(1, 'Employee is required'),
-  priority: z.string().min(1, 'Priority is required'),
-  category: z.string().min(1, 'Category is required'),
-  dueDate: z.string()
+  EmployeeEmail: z.string().min(1, 'Employee is required'),
+  Priority: z.string().min(1, 'Priority is required'),
+  Category: z.string().min(1, 'Category is required'),
+  DueDate: z.string()
   .min(1, 'Due date is required')
   .refine(
       (value) => {
@@ -21,11 +23,14 @@ const goalSchema = z.object({
       },
       { message: 'Due Date must be today or later' }
     ),
-  title: z.string().min(3, 'Goal title must be at least 3 characters'),
-  description: z.string().min(10, 'Description is required'),
+  GoalTitle: z.string().min(3, 'Goal title must be at least 3 characters'),
+  Description: z.string().min(10, 'Description is required'),
+  
 });
 
-export default function AddGoal({ onClose }) {
+export default function AddGoal({ onClose , users , tenantId}) {
+  const [selectedEmployee, setSelectedEmployee] = useState('');
+  const [isSubmitting , setIsSubmitting] = useState(false);
   const {
     register,
     control,
@@ -34,18 +39,33 @@ export default function AddGoal({ onClose }) {
   } = useForm({
     resolver: zodResolver(goalSchema),
     defaultValues: {
-      employee: '',
-      priority: '',
-      category: '',
-      dueDate: '',
-      title: '',
-      description: '',
+      EmployeeEmail: '',
+      Priority: '',
+      Category: '',
+      DueDate: '',
+      GoalTitle: '',
+      Description: '',
+  
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(' Goal Data:', data);
-    // do something, like API call
+ 
+
+  const onSubmit = async (data) => {
+  try {
+     setIsSubmitting(true);
+    const payload = {
+      ...data,
+      tenantId:tenantId,
+    }
+    const result = await hrmsAPI.createGoal(payload);
+    console.log("This is the result: ",result)
+    onClose();
+  } catch (err) {
+    console.error("❌ Error saving Performance:", err.message || err);
+  } finally {
+    setIsSubmitting(false);
+  }
   };
 
   return (
@@ -76,30 +96,47 @@ export default function AddGoal({ onClose }) {
           <div className="flex flex-col gap-[2.375rem] w-[15.5625rem]">
             {/* Employee */}
             <div>
-              <Controller
-                name="employee"
-                control={control}
-                render={({ field }) => (
-                  <Dropdown
-                    label="Employee"
-                    options={['Engineering', 'Marketing', 'Finance']}
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    placeholder="Select employee"
-                  />
-                )}
+            <Controller
+              name="EmployeeEmail"
+              control={control}
+              render={({ field }) => (
+              <DropDownSearch
+                label="Employee"
+                options={users.map((u) => ({
+                  label: (
+                    <div>
+                      <div className="font-medium">{u.fullName}</div>
+                      <div className="text-sm text-limegray">{u.email}</div>
+                    </div>
+                  ),
+                  labelText: `${u.fullName} ${u.email}`, // for search
+                  value:   u.email,
+                  displayName:  u.fullName
+                }))}
+  
+                selected={selectedEmployee}
+                onSelect={(email, option) => {
+                  setSelectedEmployee(option.displayName);  // UI shows name
+                  field.onChange(email);                    // backend gets email
+                }}
+
+                placeholder="Search Employee..."
+                 
               />
-              {errors.employee && (
-                <p className="text-Error text-[1rem]">
-                  {errors.employee.message}
-                </p>
+
               )}
+            />
+            {errors.EmployeeEmail && (
+              <p className="text-Error text-[1rem]">
+                {errors.EmployeeEmail.message}
+              </p>
+            )}
             </div>
 
             {/* Priority */}
             <div>
               <Controller
-                name="priority"
+                name="Priority"
                 control={control}
                 render={({ field }) => (
                   <Dropdown
@@ -111,9 +148,9 @@ export default function AddGoal({ onClose }) {
                   />
                 )}
               />
-              {errors.priority && (
+              {errors.Priority && (
                 <p className="text-Error text-[1rem]">
-                  {errors.priority.message}
+                  {errors.Priority.message}
                 </p>
               )}
             </div>
@@ -123,21 +160,21 @@ export default function AddGoal({ onClose }) {
             {/* Category */}
             <div>
               <Controller
-                name="category"
+                name="Category"
                 control={control}
                 render={({ field }) => (
                   <Dropdown
                     label="Category"
-                    options={['Engineering', 'Marketing', 'Finance']}
+                    options={['Behavioral', 'Emotional', 'Man']}
                     selected={field.value}
                     onSelect={field.onChange}
                     placeholder="Select category"
                   />
                 )}
               />
-              {errors.category && (
+              {errors.Category && (
                 <p className="text-Error text-[1rem]">
-                  {errors.category.message}
+                  {errors.Category.message}
                 </p>
               )}
             </div>
@@ -148,11 +185,11 @@ export default function AddGoal({ onClose }) {
               <input
                 type="date"
                 className="inputMod pr-[1.5625rem]"
-                {...register('dueDate')}
+                {...register('DueDate')}
               />
-              {errors.dueDate && (
+              {errors.DueDate && (
                 <p className="text-Error text-[1rem]">
-                  {errors.dueDate.message}
+                  {errors.DueDate.message}
                 </p>
               )}
             </div>
@@ -168,10 +205,10 @@ export default function AddGoal({ onClose }) {
               type="text"
               placeholder="e.g Improve Code Review Process"
               className="inputMod pr-[1.5625rem] placeholder-input"
-              {...register('title')}
+              {...register('GoalTitle')}
             />
-            {errors.title && (
-              <p className="text-Error text-[1rem]">{errors.title.message}</p>
+            {errors.GoalTitle && (
+              <p className="text-Error text-[1rem]">{errors.GoalTitle.message}</p>
             )}
           </div>
 
@@ -181,11 +218,11 @@ export default function AddGoal({ onClose }) {
             <textarea
               placeholder="Detailed description of the goal and expected outcomes..."
               className="text-formColor bg-inputBack rounded-[10px] placeholder-input pt-[0.59375rem] pl-[1.1875rem] resize-none h-[5.5rem]"
-              {...register('description')}
+              {...register('Description')}
             />
-            {errors.description && (
+            {errors.Description && (
               <p className="text-Error text-[1rem]">
-                {errors.description.message}
+                {errors.Description.message}
               </p>
             )}
           </div>
@@ -195,9 +232,10 @@ export default function AddGoal({ onClose }) {
         <div className="w-full h-[3.4375rem] mt-[0.5rem]">
           <button
             type="submit"
-            className="w-full h-full bg-lemongreen rounded-[10px] cursor-pointer"
+            className={`w-full h-full ${isSubmitting ? 'bg-limegray' : ' bg-lemongreen'} rounded-[10px] cursor-pointer`}
+            disabled={isSubmitting ? true : false}
           >
-            Create Goal
+            {isSubmitting ? 'Creating...' : 'Create Goal'}
           </button>
         </div>
       </form>

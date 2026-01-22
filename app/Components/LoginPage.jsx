@@ -68,42 +68,12 @@ export default function LoginPage() {
       <div className="flex justify-between items-center">
         {/* Left side info */}
         <div className="w-[40.875rem] h-[42.4375rem] relative">
-          <section className="flex flex-col gap-[4.78125rem] relative">
+          <section className="flex flex-col justify-between h-full gap-[4.78125rem]  ">
             <div>
-              <h1 className="text-white text-[2.5rem]">HRMS Login Page</h1>
-              <h4 className="text-graysh text-[1rem]">Human Resource Management System</h4>
+              <h1 className="text-white text-[2.5rem]">HireBase Login Page</h1>
             </div>
 
-            {/* Features */}
-            <div className="maindivider">
-              <div className='center'>
-                <img src="/image/userGroup.png" alt="" />
-              </div>
-              <div className="halfdivider">
-                <h1 className="headertxt self-start">Multi-Tenant Architecture</h1>
-                <h4 className="text-graysh">Isolated data, custom branding, and flexible multi-tenant support with schema or database separation.</h4>
-              </div>
-            </div>
-
-            <div className="maindivider">
-              <div className='center'>
-                <img src="/image/Icon/Action/eye.png" alt="" />
-              </div>
-              <div className="halfdivider">
-                <h1 className="headertxt self-start">End-to-End Employee Lifecycle Management</h1>
-                <h4 className="text-graysh">End-to-end HR: onboarding to offboarding, with custom workflows and document management.</h4>
-              </div>
-            </div>
-
-            <div className="maindivider">
-              <div className='center'>
-                <img src="/image/Refresh.png" alt="" />
-              </div>
-              <div className="halfdivider">
-                <h1 className="headertxt self-start">Advanced Automation</h1>
-                <h4 className="text-graysh">Secure RBAC access, localized payroll/tax, and real-time audit logs.</h4>
-              </div>
-            </div>
+ 
 
             {/* Footer links */}
             <div className="self-baseline">
@@ -123,7 +93,7 @@ export default function LoginPage() {
             <section className="flex flex-col gap-[1.5625rem] mt-[74px] mb-[74px] ml-[79px] mr-[79px]">
               <div className="flex flex-col gap-[0.75rem]">
                 <h1 className="text-white text-2xl">Get Started</h1>
-                <h4 className="text-graysh text-base">Welcome to HRMS - Sign in with your account</h4>
+                <h4 className="text-graysh text-base">Welcome to HireBase - Sign in with your account</h4>
               </div>
 
               {/* Form */}

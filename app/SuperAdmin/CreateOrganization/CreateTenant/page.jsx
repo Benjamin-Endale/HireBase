@@ -55,7 +55,8 @@ const Page = () => {
 
   const onSubmit = (data) => {
     setTenantData(data); // store tenant info
-    router.push('/SuperAdmin/CreateOrganization/RegisterAdmin');
+    router.push('/SuperAdmin/CreateOrganization/CreateTenant');
+ 
   };
 
   const onCancel = () => {

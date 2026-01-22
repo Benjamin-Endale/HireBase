@@ -35,16 +35,15 @@ const scheduleSchema = z.object({
 });
 
 
-export default function AddSchedule({ onClose , addSub , Applicant,  ShortlIst , users }) {
-  const router = useRouter();
-  const [selectedDuration, setSelectedDuration] = useState('');
-  const [selectedCandidate, setSelectedCandidate] = useState('');
+export default function AddInterview({ onClose ,   ShortlIst , users }) {
+ 
+ 
+    const [selectedCandidate, setSelectedCandidate] = useState('');
     const [selectedMode, setSelectedMode] = useState('');
-  const [selectedInterviewer, setSelectedInterviewer] = useState('');
     const [selectedInterview, setSelectedInterview] = useState('');
- const [isSubmitting , setIsSubmitting] = useState(false)
-  const [time, setTime] = useState();
-    const [searchTerm, setSearchTerm] = useState('');
+    const [isSubmitting , setIsSubmitting] = useState(false)
+    const [time, setTime] = useState("");
+ 
   
 
  
@@ -58,7 +57,7 @@ export default function AddSchedule({ onClose , addSub , Applicant,  ShortlIst ,
   } = useForm({
     resolver: zodResolver(scheduleSchema),
     defaultValues: {
-      applicantEmail: Applicant?.email || "",
+      applicantEmail: "",
       scheduledDate: "",
       scheduledTime: "",
       duration: "",
@@ -68,26 +67,23 @@ export default function AddSchedule({ onClose , addSub , Applicant,  ShortlIst ,
       mode: "",
     },
   });
-  useEffect(() => {
-  if (Applicant?.name) {
-    setSelectedCandidate(Applicant.name);     // shows in UI
-  }
-  if (Applicant?.email) {
-    setValue("applicantEmail", Applicant.email);  // populates form value
-  }
-}, [Applicant?.name, Applicant?.email]);
-
+ 
 
 
  
  
 const onSubmit = async (data) => {
   try {
- 
+    // Get the full candidate using the selected email
+    const selected = ShortlIst.shortlistedApplicants.find(
+      (x) => x.email === data.applicantEmail
+    );
+
     const interviewPayload = {
       ...data,
-      jobTitle:Applicant?.jobTitle || selectedCandidate.jobTitle
-    }
+      jobTitle: selected?.jobTitle || null,
+    };
+
     const result = await hrmsAPI.createInterviewfromShortlist(interviewPayload);
     onClose();
   } catch (err) {
@@ -96,6 +92,7 @@ const onSubmit = async (data) => {
     setIsSubmitting(false);
   }
 };
+
 
  
   return (
@@ -138,14 +135,15 @@ const onSubmit = async (data) => {
                     </div>
                   ),
                   labelText: `${s.name} ${s.email}`, // for search
-                  value: Applicant?.email || s.email,
-                  displayName:  Applicant?.name || s.name
+                  value:   s.email,
+                  displayName:    s.name,
+                    original: s        
                 }))}
   
                 selected={selectedCandidate}
                 onSelect={(email, option) => {
-                  setSelectedCandidate(option.displayName);  // UI shows name
-                  field.onChange(email);                    // backend gets email
+                setSelectedCandidate(option.displayName);  // UI shows name
+                field.onChange(email);                    // backend gets email
                 }}
 
                 placeholder="Search Candidate..."

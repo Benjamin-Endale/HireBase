@@ -26,7 +26,7 @@ const NumberInput = ({
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2">
 
       <button
         type="button"
@@ -35,10 +35,7 @@ const NumberInput = ({
         disabled={value >= max}
         aria-label="Increase value"
       >
-
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.33366 10L8.00033 6L12.667 10" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="/image/Icon/vectorUP.png" alt="" />
       </button>
 
       <button
@@ -48,9 +45,7 @@ const NumberInput = ({
         disabled={value <= min}
         aria-label="Decrease value"
       >
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.6663 6L7.99967 10L3.33301 6" stroke="#BEE532" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="/image/Icon/vectorDown.png" alt="" />
 
       </button>
 

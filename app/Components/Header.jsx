@@ -21,7 +21,8 @@ const Header = ({ readPath , session }) => {
     Training_and_Development: 'Manage training programs, enrollments, and employee development',
     User_Authentication: '',
     Department_Management: 'Manage company structure, departments hierarchy.',
-    Admin_Settings: 'Manage training programs, enrollments, and employee development'
+    Admin_Settings: 'Manage training programs, enrollments, and employee development',
+ 
   }
 
   // Map human-readable titles to object keys
@@ -89,6 +90,7 @@ const Header = ({ readPath , session }) => {
     "Admin/DepartmentEmployeeRegistration/AddNewemployeesecond": 'Add_New_Employee',
     "Admin/DepartmentEmployeeRegistration/Compensation": "Add_New_Employee",
     "Admin/DepartmentEmployeeRegistration/System": "Add_New_Employee",
+
 
 
   }

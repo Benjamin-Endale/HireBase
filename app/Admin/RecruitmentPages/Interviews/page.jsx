@@ -12,11 +12,14 @@ export default async function EmployeesServerPage( ) {
   console.log(session)
   const tenantId = session?.user.tenantId
  
-
+  const users = await hrmsAPI.getUser(tenantId, token);
+ 
+  const ShortlIst = await hrmsAPI.getShortList(tenantId, token);
   const jobs  = await hrmsAPI.getJobs(tenantId,token)
   const Applicants = await hrmsAPI.getApplicant(tenantId, token);
-  console.log("🧾 Data fetched from backend:", Applicants);
+  const interviews = await hrmsAPI.getInterview(token)
+  console.log("🧾 interviews fetched from backend:", interviews);
 
-  return <Interview  jobs={jobs} Applicants={Applicants || []}  />;
+  return <Interview  jobs={jobs}  interviews={interviews} users={users}  ShortlIst={ShortlIst} Applicants={Applicants}/>;
 }
   

@@ -13,7 +13,7 @@ const HeaderPortal = ({ readPath,session }) => {
     Training: "Welcome back! Heres whats happening at your portal today.",
     Setting:"Welcome back! Heres whats happening at your portal today.",
     Announcement:"Welcome back! Heres whats happening at your portal today.",
-
+ 
   }
 
   // Map human-readable titles to object keys
@@ -34,8 +34,8 @@ const HeaderPortal = ({ readPath,session }) => {
     'EmployeePortal/Performance/MyPerformance': 'Performance',
     'EmployeePortal/Performance/Reviews': 'Performance',
     "SuperAdmin/AllOrganization":"Performance",
-    "EmployeePortal/Announcement/AnnouncementDetail":"Announcement"
-
+    "EmployeePortal/Announcement/AnnouncementDetail":"Announcement",
+    "EmployeePortal/ViewLeave": 'Leave_Request'
 
   }
 

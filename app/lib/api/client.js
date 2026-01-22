@@ -361,6 +361,15 @@ getLeaveByTenantId: (tenantId,token) =>
     },
   }),
 
+  getInterview: (token) =>
+  apiClient(`/interviews`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+ 
+
 
   createAttendance: (userId, token) =>
     apiClient('/attendance/clockin', {
@@ -417,10 +426,21 @@ getLeaveByTenantId: (tenantId,token) =>
       body: payload, 
     }, token),
 
+ 
+   createPerformance: (payload, token) =>
+    apiClient('/PerformanceReview', {
+      method: 'POST',
+      body: payload, 
+    }, token),
 
  
 
-  
+   createGoal: (payload, token) =>
+    apiClient('/goal', {
+      method: 'POST',
+      body: payload, 
+    }, token),
+
 
   getEmployeesBydepartment: (departmentId , token) =>
   apiClient(`/employees/by-main-department/${departmentId}`, {
@@ -432,7 +452,6 @@ getLeaveByTenantId: (tenantId,token) =>
 
   
 
-  
 
   getAttendance: (userId, token) =>
   apiClient(`/attendance/user/${userId}`, {
@@ -441,7 +460,45 @@ getLeaveByTenantId: (tenantId,token) =>
       Authorization: `Bearer ${token}`,
     },
   }),
+ 
+ 
+ 
 
+  getReviewByuserID: (userId, token) =>
+  apiClient(`/performancereview/user/${userId}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+ 
+
+ 
+  getPerformanceReviewbyID: (id, token) =>
+  apiClient(`/performancereview/${id}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+
+  getGoalbyTenant: (tenantId, token) =>
+  apiClient(`/goal/tenant/${tenantId}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+
+
+  getPerformancebyTenant: (tenantId, token) =>
+  apiClient(`/PerformanceReview/tenant/${tenantId}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+ 
 
   
   getAttendancbyTenant: (tenantId, token) =>
@@ -469,13 +526,19 @@ getEmployeesTenantandOrganization: (tenantId,organizationId, token) =>
       method: 'GET' },
      token),
 
-
  
-
 
 
 getOrganizations: (token) =>
   apiClient('/organizations', {
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${token}`  
+    }
+  }),
+
+getReviewQuestionbyTenant: (tenantId,token) =>
+  apiClient(`/ReviewQuestion/tenant/${tenantId}`, {
     method: 'GET',
     headers: {
         Authorization: `Bearer ${token}`  
@@ -527,6 +590,27 @@ getOrganizationsByTenantId: (tenantId, token) =>
         Authorization: `Bearer ${token}`,
       },
     }),
+ 
+
+    getEmployeesByRole: (tenantId, token) =>
+      apiClient(`/users/employees/by-tenant/${tenantId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+ 
+
+    getDepartmentNames: (tenantId, token) =>
+      apiClient(`/departments/names/${tenantId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+
 
 
   getuserAdmins:() =>
@@ -585,10 +669,18 @@ createPermanentSettings: (settings) =>
     method: 'POST',
     body: settings,  
   }),
+ 
+
+
+
+createInterviewfromShortlist: (payload) =>
+  apiClient('/interviews', {
+    method: 'POST',
+    body: payload,  
+  }),
 
 
  
-
   getJobs: (tenantId,token) =>
   apiClient(`/job/dashboard/tenant/${tenantId}`, {
     method: 'GET',
@@ -596,14 +688,32 @@ createPermanentSettings: (settings) =>
         Authorization: `Bearer ${token}`  
     }
   }),
- 
-  getShortList: (tenantId,token) =>
-  apiClient(`/shortlist/shortlisted-with-summary/tenant/${tenantId}`, {
+
+  getQuestionsbyTenantID: (tenantId,token) =>
+  apiClient(`/reviewquestion/tenant/${tenantId}/simple`, {
     method: 'GET',
     headers: {
         Authorization: `Bearer ${token}`  
     }
   }),
+ 
+ 
+  getGoalbyEmployeeId: (empid,token) =>
+  apiClient(`/goal/user/${empid}`, {
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${token}`  
+    }
+  }),
+
+
+  getShortList: (tenantId,token) =>
+  apiClient(`/shortlist/tenant/${tenantId}`, {
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${token}`  
+    }
+  }), 
 
 
 getPermanentSettings: (token) =>
@@ -625,8 +735,12 @@ getPermanentSettings: (token) =>
       method: 'POST', 
       body: userData 
     }),
-
  
+   createQuestion: (ReviewData) =>
+    apiClient('/ReviewQuestion', { 
+      method: 'POST', 
+      body: ReviewData 
+    }),
 
   createInterview: (id) =>
     apiClient(`/shortlist/move/${id}`, { 
@@ -663,6 +777,13 @@ updateLeave: (leaveID,leaveData,token)=>
     method:'PUT',
     body:leaveData,
   },token),
+ 
+updateProgress: (goalId, progress, token) =>
+  apiClient(`/goal/${goalId}/updateProgress`, {
+    method: 'POST', // must match backend,
+    body:  progress, // send number as JSON
+  }, token),
+
 
 
   updateEmployeeDepartment: (employeeId, departmentId, token) =>
@@ -693,6 +814,12 @@ updateLeave: (leaveID,leaveData,token)=>
       method: 'DELETE' 
     }),
 
+
+    
+  deleteQuestion: (id) =>
+    apiClient(`/ReviewQuestion/${id}`, { 
+      method: 'DELETE' 
+    }),
  
   deleteApplicant: (id) =>
     apiClient(`/applicant/${id}`, { 
@@ -705,6 +832,11 @@ updateLeave: (leaveID,leaveData,token)=>
     }),
 
  
+  deleteGoal: (id) =>
+    apiClient(`/goal/${id}`, { 
+      method: 'DELETE' 
+    }),
+
   deleteCandidateShortlist: (id) =>
     apiClient(`/shortlist/${id}`, { 
       method: 'DELETE' 

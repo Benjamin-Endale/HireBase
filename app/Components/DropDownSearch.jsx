@@ -1,4 +1,3 @@
- 
 import React, { useState, useEffect, useRef } from "react";
 
 export default function DropDownSearch({
@@ -12,10 +11,15 @@ export default function DropDownSearch({
   const [search, setSearch] = useState("");
   const containerRef = useRef(null);
 
-  // Normalize options safely
+  // Normalize all options safely
   const normalize = (opt) => {
     if (typeof opt === "string") {
-      return { label: opt, labelText: opt, value: opt };
+      return { 
+        label: opt, 
+        labelText: opt, 
+        value: opt, 
+        displayName: opt 
+      };
     }
 
     if (opt && typeof opt === "object") {
@@ -23,10 +27,11 @@ export default function DropDownSearch({
         label: opt.label,
         labelText: opt.labelText ?? "",
         value: opt.value ?? "",
+        displayName: opt.displayName ?? opt.labelText ?? opt.value ?? ""
       };
     }
 
-    return { label: "", labelText: "", value: "" };
+    return { label: "", labelText: "", value: "", displayName: "" };
   };
 
   const normalizedOptions = options.map(normalize);
@@ -35,6 +40,7 @@ export default function DropDownSearch({
     opt.labelText.toLowerCase().includes(search.toLowerCase())
   );
 
+  // Click outside closes dropdown
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
@@ -46,9 +52,10 @@ export default function DropDownSearch({
   }, []);
 
   return (
-    <div className="relative flex flex-col  gap-[1rem] w-full" ref={containerRef}>
+    <div className="relative flex flex-col gap-[1rem] w-full" ref={containerRef}>
       {label && <label className="textFormColor1">{label}</label>}
 
+      {/* Selected box */}
       <div
         className="flex items-center cursor-pointer inputMod"
         onClick={() => setOpen(!open)}
@@ -56,16 +63,20 @@ export default function DropDownSearch({
         {selected || placeholder}
       </div>
 
+      {/* Dropdown box */}
       {open && (
-        <div className="mt-1 w-full  border rounded-md absolute top-[6.3125rem] z-10 bg-inputBack scrollBar p-2 max-h-64 overflow-y-auto">
+        <div className="mt-1 w-full border rounded-md absolute top-[6.3125rem] z-10 bg-inputBack scrollBar p-2 max-h-64 overflow-y-auto">
+          
+          {/* Search input */}
           <input
             type="text"
-            className="w-full text-limeLight border rounded-md p-2  not-odd: mb-2"
+            className="w-full text-limeLight border rounded-md p-2 mb-2"
             placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
+          {/* Options */}
           {filteredOptions.length === 0 ? (
             <p className="text-limegray text-sm text-center py-2">
               No results found
@@ -76,7 +87,7 @@ export default function DropDownSearch({
                 key={idx}
                 className="p-2 hover:text-lemongreen text-formColor cursor-pointer rounded-md"
                 onClick={() => {
-                  onSelect(opt.value);
+                  onSelect(opt.value, opt);  // returns value + full option object
                   setOpen(false);
                 }}
               >

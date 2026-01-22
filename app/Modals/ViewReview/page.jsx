@@ -1,18 +1,18 @@
 // app/Admin/Employees/page.jsx
 import { auth } from '@/app/auth';
 import { hrmsAPI } from '@/app/lib/api/client';
-import Review from './ReviewView/page';
+import ReviewView from './ViewReview/page';
 
-export default async function ReviewQuestionsPage() {
+export default async function ReviewQuestionsPage({id}) {
   const session = await auth();
   const token = session?.accessToken;
   const tenantId = session?.user?.tenantId;
-   const userId = session?.user?.id;
  
-  console.log(userId)
  
-  const reviews = await hrmsAPI.getReviewByuserID(userId, token);
+  console.log(id)
+ 
+  const reviews = await hrmsAPI.getReviewByuserID(id, token);
   console.log(reviews)
-  return <Review reviews={reviews} /> ;
+  return <ReviewView reviews={reviews} /> ;
 
 }

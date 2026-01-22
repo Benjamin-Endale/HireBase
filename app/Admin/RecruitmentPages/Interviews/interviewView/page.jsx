@@ -4,9 +4,11 @@ import React , {useState} from 'react'
 import AddSchedule from '@/app/Modals/AddSchedule/AddSchedule'
 import ModalContainerSchedule from '@/app/Modals/AddSchedule/ModalContainerSchedule'
 import SubNavigation from '@/app/SubNavigation'
+import ModalContainerInterview from '@/app/Modals/AddInterview/ModalContainerInterview'
+import AddInterview from '@/app/Modals/AddInterview/AddInterview'
 
 
-const page = ({jobs}) => {
+const page = ({jobs , interviews , ShortlIst ,    users}) => {
     const [isOpen,setisOpen] = useState(false)
   return (
     <>
@@ -25,91 +27,64 @@ const page = ({jobs}) => {
               </div>
             </button>
             {/* Modal */}
-            <ModalContainerSchedule  open={isOpen}>
-              <AddSchedule  onClose={() => setisOpen(false)} />
-            </ModalContainerSchedule >
+            <ModalContainerInterview  open={isOpen}>
+              <AddInterview ShortlIst={ShortlIst} users={users}  onClose={() => setisOpen(false)} />
+            </ModalContainerInterview >
         </div>
         {/* table */}
         <div>
           <table>
             <thead className='tableBordercolor'>
               <tr className='textFormColor1'>
-                <th className='pb-[0.8125rem] pr-[7.125rem]'>Candidate</th>
-                <th className='pb-[0.8125rem] pr-[13.9375rem]'>Position</th>
-                <th className='pb-[0.8125rem] pr-[7.3125rem]'>Interviewer</th>
-                <th className='pb-[0.8125rem] pr-[6.8125rem]'>Date & Time</th>
-                <th className='pb-[0.8125rem] pr-[10.8125rem]'>Type</th>
-                <th className='pb-[0.8125rem] pr-[8.625rem]'>Status</th>
-                <th className='pb-[0.8125rem] pr-[10.125rem]'>Action</th>
+                <th className='pb-[0.8125rem] pr-[7.125rem] text-nowrap'>Candidate</th>
+                <th className='pb-[0.8125rem] pr-[13.9375rem] text-nowrap'>Position</th>
+                <th className='pb-[0.8125rem] pr-[7.3125rem] text-nowrap'>Interviewer</th>
+                <th className='pb-[0.8125rem] pr-[6.8125rem] text-nowrap'>Date & Time</th>
+                <th className='pb-[0.8125rem] pr-[10.8125rem] text-nowrap'>Type</th>
+                <th className='pb-[0.8125rem] pr-[8.625rem] text-nowrap'>Status</th>
+                <th className='pb-[0.8125rem] pr-[10.125rem] text-nowrap'>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Engineering</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Senior Software Engineer</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Bereket Daniel</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <div className='flex flex-col'>
-                    <h1 className='text-limeLight'>Jan 25, 2024</h1>
-                    <h4 className='textLimegray'>2:00 PM</h4>
-                  </div>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Technical Interview</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <div>
-                    <span className='bg-[rgba(190,229,50,0.05)] text-sm px-[20px] py-[8px] rounded-full text-lemongreen'>Scheduled</span>
-                  </div>
-                </td>
-                <td className='pt-[2.0625rem] flex items-center gap-[2.5625rem]'>
-                  <button type="button" className='cursor-pointer'>
-                    <img src="/image/Icon/Action/squarePen.png" alt="" />
-                  </button>
-                  <button type="button" className='cursor-pointer'>
-                    <img src="/image/Icon/Action/ban.png" alt="" />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Engineering</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Senior Software Engineer</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>Bereket Daniel</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <div className='flex flex-col'>
-                    <h1 className='text-limeLight'>Jan 25, 2024</h1>
-                    <h4 className='textLimegray'>2:00 PM</h4>
-                  </div>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <h4 className='textLimegray1'>HR Interview</h4>
-                </td>
-                <td className='pt-[1.4375rem]'>
-                  <div>
-                    <span className='bg-[rgba(190,229,50,0.05)] text-sm px-[20px] py-[8px] rounded-full text-Error'>Completed</span>
-                  </div>
-                </td>
-                <td className='pt-[2.0625rem] flex items-center gap-[2.5625rem]'>
-                  <button type="button" className='cursor-pointer'>
-                    <img src="/image/Icon/Action/squarePen.png" alt="" />
-                  </button>
-                  <button type="button" className='cursor-pointer'>
-                    <img src="/image/Icon/Action/ban.png" alt="" />
-                  </button>
-                </td>
-              </tr>
+              {interviews.data.length != 0  ?  (interviews.data.map((int,index)=>(
+                <tr key={index}>
+                  <td className='pt-[1.4375rem]'>
+                    <h4 className='textLimegray1'>{int.applicantName}</h4>
+                  </td>
+                  <td className='pt-[1.4375rem]'>
+                    <h4 className='textLimegray1'>{int.jobTitle}</h4>
+                  </td>
+                  <td className='pt-[1.4375rem]'>
+                    <h4 className='textLimegray1'>{int.interviewerName}</h4>
+                  </td>
+                  <td className='pt-[1.4375rem]'>
+                    <div className='flex flex-col'>
+                      <h1 className='text-limeLight'>{int.scheduledDate ? new Date(int.scheduledDate).toLocaleDateString('en-GB').replace(/\//g , '-') : '--|--' }</h1>
+                      <h4 className='textLimegray'>{int.scheduledTime}</h4>
+                    </div>
+                  </td>
+                  <td className='pt-[1.4375rem]'>
+                    <h4 className='textLimegray1'>{int.type}</h4>
+                  </td>
+                  <td className='pt-[1.4375rem]'>
+                    <div>
+                      <span className='bg-[rgba(190,229,50,0.05)] text-sm px-[20px] py-[8px] rounded-full text-lemongreen'>{int.status}</span>
+                    </div>
+                  </td>
+                  <td className='pt-[2.0625rem] flex items-center gap-[2.5625rem]'>
+                    <button type="button" className='cursor-pointer'>
+                      <img src="/image/Icon/Action/squarePen.png" alt="" />
+                    </button>
+                    <button type="button" className='cursor-pointer'>
+                      <img src="/image/Icon/Action/ban.png" alt="" />
+                    </button>
+                  </td>
+                </tr>
+              ))) : (
+                <tr className='text-center  '>
+                    <td colSpan="7" className='text-lemongreen pt-19'>No Interviews For Today!</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

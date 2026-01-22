@@ -8,6 +8,7 @@ import AddSchedule from '@/app/Modals/AddSchedule/AddSchedule'
 
 const page = ({ShortlIst , jobs , users}) => {
     const [isOpen,setisOpen] = useState(false)
+    const [selectedApplicant, setSelectedApplicant] = useState(null);
     const handleDelete = async (data) => {
       try {
         console.log(data)
@@ -47,7 +48,7 @@ const page = ({ShortlIst , jobs , users}) => {
                         <h4 className='textLimegray1'>{apps.name}</h4>
                         </td>
                         <td className='pt-[1.4375rem]'>
-                        <h4 className='textLimegray1'>--</h4>
+                        <h4 className='textLimegray1'>{apps.jobTitle}</h4>
                         </td>
                         <td className='pt-[1.4375rem]'>
                         <h4 className='textLimegray1'>Not assigned</h4>
@@ -67,12 +68,14 @@ const page = ({ShortlIst , jobs , users}) => {
                         </div>
                         </td>
                         <td className='pt-[2.0625rem] flex items-center gap-[2.5625rem]'>
-                        <button type="button" className='cursor-pointer' onClick={()=>setisOpen(true)}>
+                        <button type="button" className='cursor-pointer' onClick={()=> {
+                          setSelectedApplicant(apps); 
+                          setisOpen(true); }}>
                             <img src="/image/Icon/Action/calendar.png" alt="" />
                         </button>
                         {/* Modal */}
                         <ModalContainerSchedule  open={isOpen}>
-                          <AddSchedule ShortlIst={ShortlIst} users={users} onClose={() => setisOpen(false)} />
+                          <AddSchedule ShortlIst={ShortlIst} Applicant={selectedApplicant}   users={users} onClose={() => setisOpen(false)} />
                         </ModalContainerSchedule >
                         <button type="button" className='cursor-pointer' onClick={()=>handleDelete(apps.shortlistID)}>
                             <img src="/image/Icon/Action/ban.png" alt="" />

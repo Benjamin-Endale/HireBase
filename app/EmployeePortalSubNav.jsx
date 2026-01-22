@@ -40,8 +40,13 @@ const EmployeePortalSubNav = ({ readPath , leaveType , tenantId , userId , token
                 <div className='carDash2 flex-1'>
                     <div className='h-full between flex-col'>
                     <div className='flex justify-between'>
-                        <div>
-                            <img src="/image/Icon/TimeIcon.png" alt="" />
+                        <div className='w-full flex items-center justify-between'>
+                            <div>
+                                <img src="/image/Icon/TimeIcon.png" alt="" />
+                            </div>
+                            <div>
+                                <button onClick={()=>router.push('./ViewLeave')} className='text-lemongreen cursor-pointer'>See More</button>
+                            </div>
                         </div>
                     </div>
                     <div className='flex flex-col'>
