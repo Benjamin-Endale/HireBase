@@ -26,203 +26,107 @@ namespace HireBase_Backend.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
-                    b.Property<DateTime?>("ClosingDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("closing_date");
+                    b.Property<Guid>("ApplicantRegistrationId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("Github")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                    b.Property<string>("Email")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
-                    b.Property<Guid>("JobId")
+                    b.Property<Guid?>("JobId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Linkedin")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("normalized_email");
-
                     b.Property<string>("Phone")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Portfolio")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<Guid>("RecruiterId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ResumeUrl")
+                        .HasMaxLength(2083)
+                        .HasColumnType("nvarchar(2083)");
 
                     b.Property<string>("Status")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("status");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("updated_at");
-
-                    b.Property<string>("X_Twitter")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("position")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicantRegistrationId");
+
+                    b.HasIndex("JobId");
+
+                    b.ToTable("Applicants");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.ApplicantJob", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ApplicantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsApplied")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("JobId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("SavedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex("JobId");
 
-                    b.HasIndex("RecruiterId");
+                    b.HasIndex("ApplicantId", "JobId")
+                        .IsUnique();
 
-                    b.ToTable("Applicants");
+                    b.ToTable("applicant_jobs");
                 });
 
-            modelBuilder.Entity("HireBase_Backend.Models.Interview", b =>
+            modelBuilder.Entity("HireBase_Backend.Models.ApplicantRegistration", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
-                    b.Property<int?>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<string>("InterviewNote")
+                    b.Property<string>("Email")
                         .IsRequired()
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("email");
+
+                    b.Property<string>("Fullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("fullname");
+
+                    b.Property<string>("OtpCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MeetingUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ScheduledDate")
+                    b.Property<DateTime?>("OtpExpiryUtc")
                         .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ScheduledTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("ShortlistId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ShortlistId");
-
-                    b.ToTable("Interviews");
-                });
-
-            modelBuilder.Entity("HireBase_Backend.Models.Job", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("About_Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ClosingDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("closing_date");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("Employee_Type")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("JobTitle")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Job_Position")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<Guid>("RecruiterID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Requirements")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Salary")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Status")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("status");
-
-                    b.Property<string>("Task")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("updated_at");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RecruiterID");
-
-                    b.ToTable("jobs");
-                });
-
-            modelBuilder.Entity("HireBase_Backend.Models.Recruiter", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("ClosingDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("closing_date");
-
-                    b.Property<string>("Company_Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Country")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("normalized_email");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -234,20 +138,257 @@ namespace HireBase_Backend.Migrations
                         .HasColumnType("varbinary(max)")
                         .HasColumnName("password_salt");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("updated_at");
+                    b.Property<DateTime>("RegisteredAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Recruiters");
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("applicant_registrations");
                 });
 
-            modelBuilder.Entity("HireBase_Backend.Models.Shortlist", b =>
+            modelBuilder.Entity("HireBase_Backend.Models.Employee", b =>
+                {
+                    b.Property<Guid>("EmployeeID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("address");
+
+                    b.Property<string>("BankAccountNumber")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("bankAccountNumber");
+
+                    b.Property<string>("BenefitsEnrollment")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("benefits_enrollment");
+
+                    b.Property<string>("Certification")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("certification ");
+
+                    b.Property<string>("ContractFile")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("contractFile");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Currency")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("currency");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("date_of_birth");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("email");
+
+                    b.Property<string>("EmergencyContactName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("emergency_contact_name");
+
+                    b.Property<string>("EmergencyContactNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("emergency_contact_number");
+
+                    b.Property<string>("EmployeeCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("employee_code");
+
+                    b.Property<string>("EmployeeEducationStatus")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("employee_education_status");
+
+                    b.Property<string>("EmploymentType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("employee_type");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("first_name");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("gender");
+
+                    b.Property<DateTime>("HireDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("hire_date");
+
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("job_title");
+
+                    b.Property<DateTime>("LastCreditUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("last_name");
+
+                    b.Property<decimal>("LeaveCredit")
+                        .HasColumnType("decimal(5,2)")
+                        .HasColumnName("leave_credit");
+
+                    b.Property<string>("MaritalStatus")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("marital_status");
+
+                    b.Property<string>("Nationality")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("nationality");
+
+                    b.Property<string>("PassportNumber")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("passportNumber");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("paymentMethod");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("phone_number");
+
+                    b.Property<string>("PhotoUrl")
+                        .IsRequired()
+                        .HasMaxLength(2083)
+                        .HasColumnType("nvarchar(2083)")
+                        .HasColumnName("photo_url");
+
+                    b.Property<string>("Resume")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("resume");
+
+                    b.Property<decimal?>("Salary")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("salary");
+
+                    b.Property<string>("ShiftDetails")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("shift_details");
+
+                    b.Property<string>("TaxIdenitificationNumber")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("taxIdenitificationNumber");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("tenant_id");
+
+                    b.Property<DateTime?>("TerminatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("terminated_date");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.Property<string>("WorkLocation")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("workLocation");
+
+                    b.HasKey("EmployeeID");
+
+                    b.HasIndex("TenantId");
+
+                    b.ToTable("employees");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Interview", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<Guid?>("ApplicantId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("InterviewNote")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LocationUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MeetingUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ScheduledDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ScheduledOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ShortlistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicantId");
+
+                    b.HasIndex("ShortlistId");
+
+                    b.ToTable("Interviews");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Job", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<DateTime?>("ApplicationDeadline")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("ClosingDate")
                         .HasColumnType("datetime2")
@@ -257,125 +398,491 @@ namespace HireBase_Backend.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_at");
 
-                    b.Property<string>("Github")
+                    b.Property<string>("JobDescription")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("JobId")
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("JobType")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Requirement")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SalaryRange")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("TenantID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Linkedin")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TenantID");
+
+                    b.ToTable("jobs");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("description");
+
+                    b.Property<bool>("IsSystem")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_system");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("name");
+
+                    b.Property<string>("PermissionsJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("permissions");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000001"),
+                            Description = "Full system access",
+                            IsSystem = true,
+                            Name = "SuperAdmin",
+                            PermissionsJson = "[\"*\"]"
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000002"),
+                            Description = "Tenant admin access",
+                            IsSystem = true,
+                            Name = "SystemAdmin",
+                            PermissionsJson = "[\"AdminPage\"]"
+                        });
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Shortlist", b =>
+                {
+                    b.Property<Guid>("ShortlistID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<Guid>("JobID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("Phone")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ResumeUrl")
+                        .HasMaxLength(2083)
+                        .HasColumnType("nvarchar(2083)");
+
+                    b.Property<DateTime>("ShortlistedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("position")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ShortlistID");
+
+                    b.HasIndex("JobID");
+
+                    b.ToTable("shortlists");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Tenant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Domain")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("domain");
+
+                    b.Property<string>("Industry")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("industry");
+
+                    b.Property<string>("Location")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("location");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("tenant_name");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("TimeZone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Domain")
+                        .IsUnique();
+
+                    b.ToTable("tenants");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int")
+                        .HasColumnName("access_failed_count");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("email");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit")
+                        .HasColumnName("email_confirmed");
+
+                    b.Property<Guid?>("EmployeeId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("employee_id");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("full_name");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_active");
+
+                    b.Property<DateTime?>("LastLoginUtc")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("last_login_utc");
+
+                    b.Property<DateTime?>("LockoutEndUtc")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("lockout_end_utc");
+
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("normalized_email");
 
-                    b.Property<string>("Phone")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<string>("OtpCode")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Portfolio")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<DateTime?>("OtpExpiryUtc")
+                        .HasColumnType("datetime2");
 
-                    b.Property<Guid>("RecruiterId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)")
+                        .HasColumnName("password_hash");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("PasswordResetOtp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("PasswordResetOtpExpires")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)")
+                        .HasColumnName("password_salt");
+
+                    b.Property<string>("PhoneNumber")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("status");
+                        .HasColumnName("phone_number");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit")
+                        .HasColumnName("phone_confirmed");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion")
+                        .HasColumnName("row_version");
+
+                    b.Property<string>("SecurityStamp")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)")
+                        .HasColumnName("security_stamp");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("tenant_id");
+
+                    b.Property<string>("TfaSecret")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("tfa_secret");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit")
+                        .HasColumnName("two_factor_enabled");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("updated_at");
 
-                    b.Property<string>("X_Twitter")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("TenantId");
+
+                    b.ToTable("users");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.UserRole", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("JobId");
+                    b.HasIndex("RoleId");
 
-                    b.HasIndex("RecruiterId");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("Shortlists");
+                    b.ToTable("UserRoles");
                 });
 
             modelBuilder.Entity("HireBase_Backend.Models.Applicant", b =>
                 {
+                    b.HasOne("HireBase_Backend.Models.ApplicantRegistration", "ApplicantRegistration")
+                        .WithMany()
+                        .HasForeignKey("ApplicantRegistrationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HireBase_Backend.Models.Job", "Job")
+                        .WithMany("Applicants")
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("ApplicantRegistration");
+
+                    b.Navigation("Job");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.ApplicantJob", b =>
+                {
+                    b.HasOne("HireBase_Backend.Models.ApplicantRegistration", "Applicant")
+                        .WithMany()
+                        .HasForeignKey("ApplicantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HireBase_Backend.Models.Job", "Job")
                         .WithMany()
                         .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HireBase_Backend.Models.Recruiter", "Recruiter")
-                        .WithMany("Applicants")
-                        .HasForeignKey("RecruiterId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                    b.Navigation("Applicant");
 
                     b.Navigation("Job");
+                });
 
-                    b.Navigation("Recruiter");
+            modelBuilder.Entity("HireBase_Backend.Models.Employee", b =>
+                {
+                    b.HasOne("HireBase_Backend.Models.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tenant");
                 });
 
             modelBuilder.Entity("HireBase_Backend.Models.Interview", b =>
                 {
+                    b.HasOne("HireBase_Backend.Models.Applicant", null)
+                        .WithMany("Interviews")
+                        .HasForeignKey("ApplicantId");
+
                     b.HasOne("HireBase_Backend.Models.Shortlist", "Shortlist")
                         .WithMany()
                         .HasForeignKey("ShortlistId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Shortlist");
                 });
 
             modelBuilder.Entity("HireBase_Backend.Models.Job", b =>
                 {
-                    b.HasOne("HireBase_Backend.Models.Recruiter", "Recruiter")
-                        .WithMany("Jobs")
-                        .HasForeignKey("RecruiterID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("HireBase_Backend.Models.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantID")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Recruiter");
+                    b.Navigation("Tenant");
                 });
 
             modelBuilder.Entity("HireBase_Backend.Models.Shortlist", b =>
                 {
                     b.HasOne("HireBase_Backend.Models.Job", "Job")
                         .WithMany()
-                        .HasForeignKey("JobId")
+                        .HasForeignKey("JobID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HireBase_Backend.Models.Recruiter", "Recruiter")
-                        .WithMany()
-                        .HasForeignKey("RecruiterId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("Job");
-
-                    b.Navigation("Recruiter");
                 });
 
-            modelBuilder.Entity("HireBase_Backend.Models.Recruiter", b =>
+            modelBuilder.Entity("HireBase_Backend.Models.User", b =>
+                {
+                    b.HasOne("HireBase_Backend.Models.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
+
+                    b.HasOne("HireBase_Backend.Models.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Tenant");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.UserRole", b =>
+                {
+                    b.HasOne("HireBase_Backend.Models.Role", "Role")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HireBase_Backend.Models.User", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Applicant", b =>
+                {
+                    b.Navigation("Interviews");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.Job", b =>
                 {
                     b.Navigation("Applicants");
+                });
 
-                    b.Navigation("Jobs");
+            modelBuilder.Entity("HireBase_Backend.Models.Role", b =>
+                {
+                    b.Navigation("UserRoles");
+                });
+
+            modelBuilder.Entity("HireBase_Backend.Models.User", b =>
+                {
+                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }

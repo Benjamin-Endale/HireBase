@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HireBase_Backend"
+    "\\HireBase_Backend",
+    "\\HireBase_Backend\\Controllers",
+    "\\HireBase_Backend\\Data",
+    "\\HireBase_Backend\\DTOs",
+    "\\HireBase_Backend\\Filters",
+    "\\HireBase_Backend\\Models",
+    "\\HireBase_Backend\\Services"
   ],
-  "SelectedNode": "\\HireBase_Backend\\Program.cs",
+  "SelectedNode": "\\HireBase_Backend\\Controllers\\ApplicantController.cs",
   "PreviewInSolutionExplorer": false
 }

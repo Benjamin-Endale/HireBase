@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj": {}
+    "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj": {
+    "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
         "projectName": "HireBase_Backend",
-        "projectPath": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
-        "packagesPath": "C:\\Users\\Edsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\obj\\",
+        "projectPath": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
+        "packagesPath": "C:\\Users\\Prodigy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Edsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Prodigy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -63,6 +71,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.14.0, )"
             }
           },
           "imports": [

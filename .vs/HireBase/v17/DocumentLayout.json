@@ -1,30 +1,197 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\",
+  "WorkspaceRootPath": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\ApplicantController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\IPasswordHasher.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\JobController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\JobController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TenantsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\TenantsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Interview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Interview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\EmployeesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\EmployeesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantAuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\ApplicantAuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantJobController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\ApplicantJobController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\InterviewsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\InterviewsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ShortlistController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\ShortlistController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\EmployeeDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\EmployeeDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\InterviewDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\InterviewDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Data\\AppDbContext.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Data\\AppDbContext.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\JwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\JwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IJwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\IJwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Recruiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Recruiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\UserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\UserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\TenantDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\TenantDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\JobDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\JobDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Interview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Interview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ShortlistDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\ShortlistDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Shortlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Shortlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\SaveJobRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\SaveJobRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantJob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\ApplicantJob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\ApplicantDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\UpdatePasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\DTOs\\UpdatePasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TestController.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Controllers\\TestController.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\ApplicantRegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Models\\Tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\HireBase_Backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HireBase_Backend\\Services\\IPasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\Pbkdf2PasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IPasswordHasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IJwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\JwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,89 +201,599 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Pbkdf2PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
-              "RelativeToolTip": "HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvy4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAkwLAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:27:36.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-23T10:55:52.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\IPasswordHasher.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs",
-              "RelativeToolTip": "HireBase_Backend\\Services\\IPasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "RoleAuthorizeAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs",
+              "RelativeToolTip": "HireBase_Backend\\Filters\\RoleAuthorizeAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:27:19.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-23T09:16:26.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Role.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:11:04.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InterviewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\InterviewDTO.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\InterviewDTO.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\InterviewDTO.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\InterviewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:42:59.167Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Recruiter.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Recruiter.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Recruiter.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Recruiter.cs",
-              "RelativeToolTip": "HireBase_Backend\\Models\\Recruiter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:25:18.453Z",
-              "EditorCaption": ""
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "HireBase_Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\appsettings.json",
+              "RelativeToolTip": "HireBase_Backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-21T07:23:24.143Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Job.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Job.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Job.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Job.cs",
-              "RelativeToolTip": "HireBase_Backend\\Models\\Job.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwv0MAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Program.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Program.cs",
+              "RelativeToolTip": "HireBase_Backend\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:25:01.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Interview.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Interview.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Interview.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Interview.cs",
-              "RelativeToolTip": "HireBase_Backend\\Models\\Interview.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:24:48.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T07:28:55.624Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Applicant.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Applicant.cs",
-              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Applicant.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\HireBase\\HireBase_Backend\\Models\\Applicant.cs",
-              "RelativeToolTip": "HireBase_Backend\\Models\\Applicant.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAADwv0AAAAAAAAAAAAAAAA==",
+              "Title": "TenantsController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TenantsController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\TenantsController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TenantsController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\TenantsController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAC8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T21:24:30.922Z",
+              "WhenOpened": "2026-01-22T22:30:28.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T11:50:42.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JobController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\JobController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\JobController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\JobController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\JobController.cs",
+              "ViewState": "AgIAACYBAAAAAAAAAAAAAB0BAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T23:42:57.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicantController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\ApplicantController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\ApplicantController.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAMIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:57:25.461Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\UserRole.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:18:07.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\User.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\User.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAYwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:19:07.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Employee.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Employee.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:37:15.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\EmployeeDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\EmployeeDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\EmployeeDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\EmployeeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T11:55:43.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-23T12:11:25.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T12:12:15.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InterviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\InterviewsController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\InterviewsController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\InterviewsController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\InterviewsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:41:32.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ShortlistDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ShortlistDTO.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\ShortlistDTO.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ShortlistDTO.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\ShortlistDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:37:06.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ShortlistController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ShortlistController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\ShortlistController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ShortlistController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\ShortlistController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:34:43.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SaveJobRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\SaveJobRequest.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\SaveJobRequest.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\SaveJobRequest.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\SaveJobRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:26:15.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicantJobController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantJobController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\ApplicantJobController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantJobController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\ApplicantJobController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:25:23.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ApplicantDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantDTO.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\ApplicantDTO.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantDTO.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\ApplicantDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:58:39.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RequestPasswordOtpDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\RequestPasswordOtpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:52:16.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UpdatePasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\UpdatePasswordDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\UpdatePasswordDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\UpdatePasswordDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\UpdatePasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:49:21.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ApplicantRegisterAuthDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\ApplicantRegisterAuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:48:15.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicantAuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantAuthController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\ApplicantAuthController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantAuthController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\ApplicantAuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:42:57.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicantRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\ApplicantRegistrationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:22:51.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "JobDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\JobDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\JobDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\JobDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\JobDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:07:20.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TenantDto.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\TenantDto.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\DTOs\\TenantDto.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\DTOs\\TenantDto.cs",
+              "RelativeToolTip": "HireBase_Backend\\DTOs\\TenantDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T22:36:44.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Pbkdf2PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
+              "RelativeToolTip": "HireBase_Backend\\Services\\Pbkdf2PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:57:44.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IPasswordHasher.cs",
+              "RelativeToolTip": "HireBase_Backend\\Services\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:57:17.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "HireBase_Backend\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:41:48.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IJwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IJwtTokenService.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\IJwtTokenService.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\IJwtTokenService.cs",
+              "RelativeToolTip": "HireBase_Backend\\Services\\IJwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:41:46.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Services\\EmailService.cs",
+              "RelativeToolTip": "HireBase_Backend\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:40:47.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Pbkdf2PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\Pbkdf2PasswordHasher.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\Pbkdf2PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\Pbkdf2PasswordHasher.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\Pbkdf2PasswordHasher.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:39:34.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IPasswordHasher.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IPasswordHasher.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:39:31.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\JwtTokenService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\JwtTokenService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:36:20.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IJwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IJwtTokenService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IJwtTokenService.cs",
+              "ToolTip": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IJwtTokenService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\IJwtTokenService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:35:52.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\EmailService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\EmailService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Edsha\\Desktop\\HireBase\\HireBase_Backend\\Services (2)\\EmailService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:34:56.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Tenant.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Tenant.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Tenant.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Tenant.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Tenant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:31:15.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Shortlist.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Shortlist.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Shortlist.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Shortlist.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Shortlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:31:03.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Job.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Job.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Job.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:30:49.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Interview.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Interview.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Interview.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Interview.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Interview.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:30:26.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ApplicantRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantRegistration.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\ApplicantRegistration.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantRegistration.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\ApplicantRegistration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:30:14.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ApplicantJob.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantJob.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\ApplicantJob.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\ApplicantJob.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\ApplicantJob.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:29:56.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Applicant.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Applicant.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Models\\Applicant.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Models\\Applicant.cs",
+              "RelativeToolTip": "HireBase_Backend\\Models\\Applicant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T21:29:47.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Controllers\\TestController.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Controllers\\TestController.cs",
+              "RelativeToolTip": "HireBase_Backend\\Controllers\\TestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T08:29:58.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "HireBase_Backend.csproj",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
+              "RelativeDocumentMoniker": "HireBase_Backend\\HireBase_Backend.csproj",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\HireBase_Backend.csproj",
+              "RelativeToolTip": "HireBase_Backend\\HireBase_Backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-21T07:36:16.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "HireBase_Backend\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Prodigy\\Downloads\\Telegram Desktop\\HireBase (2)\\HireBase\\HireBase_Backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "HireBase_Backend\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAALcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:28:13.84Z"
             }
           ]
         },

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireBase_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a51fa72aa5e3ee9aac4cb257055cac830a3edb2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36217f4b2f4ebdf1220b82bfeb043cd4be9160ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireBase_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireBase_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
