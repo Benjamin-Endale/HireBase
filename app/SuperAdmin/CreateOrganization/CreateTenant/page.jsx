@@ -44,7 +44,7 @@ const Page = () => {
       employeeManagement: true,
       attendanceTracking: tenantData.attendanceTracking ?? false,
       leaveManagement: tenantData.leaveManagement ?? false,
-      recruitment: tenantData.recruitment ?? false,
+      recruitment:  true,
       performanceManagement: tenantData.performanceManagement ?? false,
       trainingDevelopment: tenantData.trainingDevelopment ?? false,
     },
@@ -55,8 +55,8 @@ const Page = () => {
 
   const onSubmit = (data) => {
     setTenantData(data); // store tenant info
-    router.push('/SuperAdmin/CreateOrganization/CreateTenant');
- 
+    router.push('/SuperAdmin/CreateOrganization/RegisterAdmin');
+    console.log(data)
   };
 
   const onCancel = () => {
@@ -65,6 +65,7 @@ const Page = () => {
 
   return (
     <>
+
       {/* Progress Bar */}
       <div className='mb-[2.4375rem] flex flex-col gap-[4.125rem]'>
         <div className='grid grid-cols-4'>
@@ -77,8 +78,8 @@ const Page = () => {
           <h4 className='textFormColor'>Create Tenant</h4>
         </div>
       </div>
-
-      <form className="flex gap-[7.0625rem] font-semibold mb-[5rem]" onSubmit={handleSubmit(onSubmit)}>
+    <div className='between gap-[12.25rem]'>
+      <form className="flex flex-col gap-[7.0625rem] font-semibold mb-[5rem]" onSubmit={handleSubmit(onSubmit)}>
 
         {/* Left Section */}
         <div className="w-[42.5625rem]">
@@ -177,7 +178,7 @@ const Page = () => {
 
         {/* Right Section */}
         <div className="w-[42.5625rem] space-y-[10.5625rem]">
-          <div className="flex flex-col gap-[3.3125rem]">
+          <div className=" hidden  ">
             <div className="flex flex-col gap-[0.5625rem]">
               <div className="flex items-center gap-[0.4375rem]">
                 <img src="/image/building.png" alt="" />
@@ -278,14 +279,28 @@ const Page = () => {
             </div>
 
 
+          </div>
+        </div>
             {/* Buttons */}
             <div className="w-full h-[3.4375rem] flex gap-[2.5625rem] mt-[5.1875rem]">
               <button type="button" onClick={onCancel} className="w-[19.875rem] border border-formColor text-formColor rounded-[10px] cursor-pointer">Cancel</button>
               <button type="submit" className="w-[19.875rem] bg-lemongreen rounded-[10px] cursor-pointer">Next</button>
             </div>
-          </div>
-        </div>
       </form>
+        {/* Sidebar */}
+        <div className='flex-1'>
+            <div className='border border-limegray w-[31rem] rounded-[1.1875rem] px-[2.25rem] pt-[1.5625rem] pb-[1.9375rem]'>
+                <div className='flex items-center gap-[10px] pb-[0.8125rem]'>
+                    <img src="/image/Icon/Alert.png" alt="" />
+                    <span className='textFormColor'><strong>Important:</strong></span>
+                </div>
+                <div className='space-y-[2.25rem]'>
+                    <p className='textLimegray'>Essential personal identification and key contact information — including your full name, address, phone number, and email — are required. These details help verify your identity and prevent delays.</p>
+                    <p className='textLimegray'><strong className='text-formColor'>Tip:</strong> Double-check your spelling and numbers before submitting.</p>
+                </div>
+            </div>           
+        </div>
+    </div>
     </>
   );
 };

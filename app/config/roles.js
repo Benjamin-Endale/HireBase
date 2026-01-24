@@ -8,9 +8,7 @@ import OrganizationMainBody from "../Components/organizationBody";
 import HeaderOrg from "../Components/HeaderOrg";
 
 export const getRoleLayout = (role, readPath) => {
-  if (role === "SystemAdmin" && readPath.includes("Admin/OrganizationPages")) {
-    return { body: OrganizationMainBody, header: HeaderOrg };
-  }
+
 
   const ROLE_LAYOUTS = {
     SuperAdmin: { body: SuperAdminBody, header: Header },

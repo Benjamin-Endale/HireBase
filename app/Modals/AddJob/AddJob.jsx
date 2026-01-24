@@ -15,26 +15,24 @@ const jobSchema = z.object({
   salaryRange: z
     .string()
     .min(1, 'Salary range is required')
-    .regex(/^\d{1,3}(,\d{3})*\s*-\s*\d{1,3}(,\d{3})*$/, 'Invalid format. Example: 10,000 - 15,000'),
-  department: z.string().min(1, 'Department is required'),
+    .regex(
+      /^\d{1,3}(,\d{3})*\s*-\s*\d{1,3}(,\d{3})*$/,
+      'Invalid format. Example: 10,000 - 15,000'
+    ),
   jobType: z.string().min(1, 'Job Type is required'),
   deadline: z
     .string()
-    .min(1, { message: "Application Deadline is required" }) 
-    .refine(
-      (value) => {
-        if (!value) return false;
-        const today = new Date();
-        const deadline = new Date(value);
-        return deadline >= today;
-      },
-      { message: 'Deadline must be today or later' }
-    ),
+    .min(1, 'Application Deadline is required')
+    .refine((value) => {
+      const today = new Date();
+      const deadline = new Date(value);
+      return deadline >= today;
+    }, { message: 'Deadline must be today or later' }),
   description: z.string().min(5, 'Job Description is required'),
   requirement: z.string().min(5, 'Requirement is required'),
 });
 
-export default function AddJob({ onClose , tenantId, token  }) {
+export default function AddJob({ onClose, tenantId, token }) {
   const router = useRouter();
 
   const {
@@ -48,38 +46,34 @@ export default function AddJob({ onClose , tenantId, token  }) {
       jobTitle: '',
       location: '',
       salaryRange: '',
-      department: '',
       jobType: '',
       deadline: '',
       description: '',
       requirement: '',
     },
-    mode: 'onChange', // 👈 live validation
+    mode: 'onChange',
   });
 
   const onSubmit = async (data) => {
     try {
-
       const job = {
-        ...data,
-        TenantId: tenantId,
-        DepartmentName:data.department,
-        JobDescription:data.description,
-        applicationDeadline:data.deadline
+        JobTitle: data.jobTitle,
+        Location: data.location,
+        SalaryRange: data.salaryRange,
+        JobType: data.jobType,
+        ApplicationDeadline: data.deadline,
+        JobDescription: data.description,
+        Requirement: data.requirement,
+        TenantID: tenantId,
       };
 
-
-
-      // ✅ API call
-      const JobData = await hrmsAPI.createJob(job,token);
-      console.log("✅ Department saved:", JobData);
-
+      const JobData = await hrmsAPI.createJob(job, token);
+      console.log("✅ Job saved:", JobData);
 
       router.refresh();
       onClose();
     } catch (err) {
-      console.error("❌ Error saving Department:", err.message || err);
-    } finally {
+      console.error("❌ Error saving Job:", err.message || err);
     }
   };
 
@@ -140,24 +134,6 @@ export default function AddJob({ onClose , tenantId, token  }) {
 
           {/* Right Column */}
           <div className="w-[15.5625rem] flex flex-col gap-[2.375rem]">
-            {/* Department Dropdown */}
-            {/* <div>
-              <Controller
-                name="department"
-                control={control}
-                render={({ field }) => (
-                  <Dropdown
-                    label="Department"
-                    options={['Engineering', 'Marketing', 'Finance']}
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    placeholder="Select Department"
-                  />
-                )}
-              />
-              {errors.department && <p className="text-Error text-[1rem]">{errors.department.message}</p>}
-            </div> */}
-
             {/* Job Type Dropdown */}
             <div className="flex flex-col gap-[1rem] relative">
               <Controller

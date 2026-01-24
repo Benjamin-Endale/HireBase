@@ -2,7 +2,7 @@
 import Announcement from "@/public/svg/DashboardSvg/Announcement";
 import { getSession, signOut } from "next-auth/react";
 
-const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5270/api";
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5261/api";
 
 export async function apiClient(endpoint, options = {}, providedToken = null) {
   const url = `${API_BASE_URL}${endpoint}`;

@@ -1,4 +1,4 @@
-'use client'
+ 'use client'
 
 import React, { useEffect, useState } from 'react' 
 import { useRouter} from 'next/navigation'
@@ -57,7 +57,8 @@ const Page = () => {
       let tenantPayload = { ...tenantData };
 
       const tenantRes = await hrmsAPI.createTenant(tenantPayload);
-      const tenantId = tenantRes?.tenant?.id;
+      console.log("Salem mesfin jel nech: ",tenantRes)
+      const tenantId = tenantRes?.id;
       if (!tenantId) throw new Error('Tenant creation failed: tenantId missing');
 
       const rawEmployee = {
@@ -65,7 +66,7 @@ const Page = () => {
         ...compensationData,
         TenantId: tenantId,
       };
-
+ 
       const pascalEmployee = toPascal(rawEmployee);
 
       const formData = new FormData();

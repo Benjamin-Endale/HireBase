@@ -2,10 +2,10 @@ import { getToken } from "next-auth/jwt";
 import { NextResponse } from "next/server";
 
 const roleRoutes = {
-  SuperAdmin: "/SuperAdmin/AllOrganization",
+  SuperAdmin: "/SuperAdmin/CreateOrganization/CreateTenant",
   HR: "/Admin/Dashboard",
   Employee: "/EmployeePortal/Dashboard",
-  SystemAdmin: "/Admin/Dashboard",
+  SystemAdmin: "/Admin/RecruitmentPages/Jobposting",
   
 };
 

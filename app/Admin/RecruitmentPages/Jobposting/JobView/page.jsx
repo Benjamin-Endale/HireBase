@@ -55,7 +55,7 @@ const page = ({token, tenantId , jobs}) => {
                 <thead className='border-b border-limegray'>
                   <tr className='textFormColor1'>
                     <th className='pb-[0.8125rem] pr-74.75'>Job Title</th>
-                    <th className='pb-[0.8125rem] pr-54.5'>Department</th>
+ 
                     <th className='pb-[0.8125rem] pr-65.5'>Location</th>
 
                     <th className='pb-[0.8125rem] pr-49.75'>Posted Date</th>

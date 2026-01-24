@@ -12,11 +12,11 @@ export default async function Home() {
 
   switch (role) {
     case 'SuperAdmin':
-      redirect('/SuperAdmin/AllOrganization');
+      redirect('/SuperAdmin/CreateOrganization/CreateTenant');
     case 'HR':
       redirect('/Admin/Dashboard');
-    case 'HR':
-      redirect('/Admin/Dashboard');
+    case 'SystemAdmin':
+      redirect('/Admin/RecruitmentPages/Jobposting');
     case 'Employee':
       redirect('/EmployeePortal/Dashboard');
     default:
