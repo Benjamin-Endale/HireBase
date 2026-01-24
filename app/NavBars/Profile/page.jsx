@@ -9,6 +9,6 @@ export default async function EmployeesServerPage() {
   const session = await auth();
   const token = session?.accessToken;
  
- 
-  return <ProfileView session={session || []} />;
+   const applicantId = session?.user.id
+  return <ProfileView session={session || []} applicantId={applicantId} />;
 }

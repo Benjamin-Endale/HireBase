@@ -1,7 +1,7 @@
 // lib/api/client.js
 import { getSession, signOut } from "next-auth/react";
 
-const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5270/api";
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5261/api";
 
 export async function apiClient(endpoint, options = {}, providedToken = null) {
   const url = `${API_BASE_URL}${endpoint}`;
@@ -74,7 +74,7 @@ export async function apiClient(endpoint, options = {}, providedToken = null) {
       // Handle "No data found" as a non-error case - RETURN EMPTY ARRAY
       if (errorText.includes('No employees found') || 
           errorText.includes('No tenants found') || 
-          errorText.includes('No organizations found')) {
+          errorText.includes('No jobs available.')) {
         console.log(`Info: ${errorText}`);
         return []; // Return empty array instead of throwing error
       }
@@ -325,6 +325,14 @@ getEmployeesTenant: (tenantId, token) =>
   }),
 
 
+getApplicantApply : (applicantId, token) =>
+  apiClient(`/Applicant/applied/${applicantId}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+
 
 getJobByJobid: (jobID, token) =>
   apiClient(`/job/details/${jobID}`, {
@@ -382,6 +390,16 @@ getLeaveByTenantId: (tenantId,token) =>
     }, token),
 
 
+
+
+
+  createSave: (ApplicantData,token) =>
+    apiClient('/ApplicantJob/save', {
+      method: 'POST',
+      body: ApplicantData, 
+    }, token),
+
+
     
   getLeaveTypeByTenantID: (tenantId , token) =>
   apiClient(`/leavetypes/by-tenant/${tenantId} `, {
@@ -412,6 +430,13 @@ getLeaveByTenantId: (tenantId,token) =>
 
 
 
+  createApply: (payload, token) =>
+    apiClient('/applicant', {
+      method: 'POST',
+      body: payload, 
+    }, token),
+
+
 
   getEmployeesBydepartment: (tenantId, departmentId , token) =>
   apiClient(`/employees/by-department/${tenantId}/${departmentId}`, {
@@ -422,6 +447,19 @@ getLeaveByTenantId: (tenantId,token) =>
   }),
 
   
+
+
+
+  getsavedJobs: (Id , token) =>
+  apiClient(`/ApplicantJob/saved/${Id}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }),
+
+  
+
 
 
 
@@ -607,6 +645,18 @@ getPermanentSettings: (token) =>
       method: 'PUT',
       body: employeeData, 
     }, token),
+ 
+  updateName: (NameData ,token) =>
+    apiClient(`/ApplicantAuth/update-Name`, {
+      method: 'PUT',
+      body: NameData, 
+    }, token),
+
+  updatePassword: (PasswordData ,token) =>
+    apiClient(`/ApplicantAuth/update-password`, {
+      method: 'PUT',
+      body: PasswordData, 
+    }, token),
 
   deleteEmployee: (id) =>
     apiClient(`/employees/${id}`, { 
@@ -617,6 +667,8 @@ getPermanentSettings: (token) =>
     apiClient(`/users/${id}`, { 
       method: 'DELETE' 
     }),
+
+
 
   // Organization management
     getTenant: (token) =>

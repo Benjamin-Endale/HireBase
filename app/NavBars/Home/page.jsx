@@ -6,10 +6,10 @@ import Home from './HomeView/page';
 export default async function EmployeesServerPage() {
   const session = await auth();
   const token = session?.accessToken;
-
+  const applicantId = session?.user.id
   const jobs = await hrmsAPI.getJobs()
-  console.log('Jobs: ' , jobs)
-
-  return <Home jobs={jobs}  token={token}/> ;
+  const savedJob = await hrmsAPI.getsavedJobs(applicantId)
+ 
+  return <Home jobs={jobs || []}  savedJob={savedJob || []} applicantId={applicantId || []} token={token}/> ;
 
 }
